@@ -4,10 +4,10 @@ import Contact from "../../Contact/Contact"
 
 function Contacts({list,filter}) {
     const search = (event) => {
-
+   
   
-       console.log(filter(list.map( contact => contact.name.toLowerCase().includes(event.target.value))))
         
+        filter(list.filter( contact => contact.name.toLowerCase().includes(event.target.value.toLowerCase())))
           
      }
     return (

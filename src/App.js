@@ -49,9 +49,11 @@ state = {
    search = (massiv) => {
       this.state.filter= massiv
          
-    }
+   }
+   
+   
    render() {
-      
+       
       return (
         <div>
           
