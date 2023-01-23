@@ -1,13 +1,16 @@
-function Contact({name,number}) {
-    
+function Contact({id,name,number,deleteContact}) {
+    const click = () => {
+         deleteContact(id)
+      
+     }
     return (
      
 
-        <li>
+        <li key={id}>
 
         <p>{name}:{number}</p>
 
-
+     <button type="button" onClick={click}>Delete</button>
         </li>
 
         

@@ -2,25 +2,18 @@ import Contact from "../../Contact/Contact"
 
 
 
-function Contacts({list,filter}) {
-    const search = (event) => {
-   
-  
-        
-        filter(list.filter( contact => contact.name.toLowerCase().includes(event.target.value.toLowerCase())))
-          
-     }
+function Contacts({list,filter,deleteContact}) {
+    
     return (
 
         <div>
-            <p>Find contact</p>
-            <input type="text" name="filter" onInput={search } />
+           
 
         <ul>
             {list.map((contact) => {
                 return (
 
-                    <Contact id={contact.id} name={contact.name} number ={contact.number} />
+                    <Contact id={contact.id} name={contact.name} number={contact.number} deleteContact={ deleteContact} />
 
 
                 )
